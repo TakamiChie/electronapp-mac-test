@@ -4,7 +4,10 @@
   "description": "Experimental repository to create the minimum configuration Windows and Mac binary with 'electron-builder'",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "run-script-os",
+    "build:win32": "npx electron-builder --win --ia32",
+    "build:darwin": "npx electron-builder --mac --universal"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,6 +20,8 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^30.0.0"
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3",
+    "run-script-os": "^1.1.6"
   }
 }
