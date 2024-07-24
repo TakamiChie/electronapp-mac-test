@@ -7,7 +7,10 @@
     "start": "electron .",
     "build": "run-script-os",
     "build:win32": "npx electron-builder --win --ia32",
-    "build:darwin": "npx electron-builder --mac --universal"
+    "build:darwin": "npx electron-builder --mac --universal",
+    "package": "npm run build && run-script-os",
+    "package:win32": "",
+    "package:darwin": "pwsh tools/mac.installer.ps1"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
