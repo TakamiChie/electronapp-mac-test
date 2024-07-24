@@ -23,5 +23,12 @@
     "electron": "^30.0.2",
     "electron-builder": "^24.13.3",
     "run-script-os": "^1.1.6"
+  },
+  "build":{
+    "files":[
+      "main.js",
+      "**/res/include_there/*",
+      "**/res/include_this"
+    ]
   }
 }
